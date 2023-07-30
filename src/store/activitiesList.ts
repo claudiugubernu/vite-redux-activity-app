@@ -2,7 +2,7 @@ import { Store } from 'redux';
 import { storeObserver } from './storeObserver';
 import { Activity } from './store';
 
-export class activitiesList {
+export class ActivitiesList {
   element: HTMLElement;
   store: Store;
   stateSelector: (store: Store) => Activity;
