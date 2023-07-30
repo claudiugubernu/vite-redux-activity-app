@@ -1,0 +1,61 @@
+@use 'sass:math';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+@function toRem($value) {
+  $remValue: math.div($value, 10) + rem; 
+  @return $remValue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: toRem(30) toRem(20);
+}
+
+.form {
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(5);
+    margin: toRem(20) 0;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    padding: toRem(10) toRem(5);
+  }
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: toRem(10) toRem(20);
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+}
+

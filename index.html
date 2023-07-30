@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="form" data-activity>
+        <div class="form__row">
+          <label form="activity">Enter Activity</label>
+          <input type="text" id="activity" data-activity-input/>
+        </div>
+        <div class="form__row">
+          <button type="submit" data-add-activity>Submit</button>
+        </div>
+      </form>
+      <ul data-activity-list></ul>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
